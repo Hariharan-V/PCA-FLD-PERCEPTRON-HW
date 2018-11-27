@@ -40,12 +40,14 @@ class2_projection = np.array(np.dot(V_optimal_line,class2.T))
 
 for i in range(len(class1_projection)):
 	if(class1_projection[i]<0):
-		
 		print("point "+ str(class1[i])+" was incorrectly projected")
+	else:
+		print("point "+ str(class1[i])+" was correctly projected")
 for i in range(len(class2_projection)):
 	if(class2_projection[i]>0):
-		
 		print("point "+ str(class2[i])+" was incorrectly projected")
+	else:
+		print("point "+ str(class2[i])+" was correctly projected")
 
 
 
