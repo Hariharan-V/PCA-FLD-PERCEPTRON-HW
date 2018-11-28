@@ -27,7 +27,9 @@ for k in range(20):
 
 	eig_vec_matrix = np.array([eig_vec_cov.T[eigenvector_index[0]],eig_vec_cov.T[eigenvector_index[1]],eig_vec_cov.T[eigenvector_index[2]]]).T
 	if k ==1:
-		print("attributes: "+raw_list[eigenvector_index[0]][0]+ " "+raw_list[eigenvector_index[1]][0]+raw_list[eigenvector_index[2]][0])
+		print("attributes with the highest variability: "+raw_list[eigenvector_index[0]][0]+ " "+raw_list[eigenvector_index[1]][0]+raw_list[eigenvector_index[2]][0])
+		print("principle components: ")
+		print(str(eig_vec_matrix))
 
 	projected_training_data = np.dot(X_training,eig_vec_matrix)
 	projected_data_class_zero = []
